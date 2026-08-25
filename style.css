@@ -125,7 +125,8 @@ h3{
     font-size: 3svb;
     align-content: center;
     padding-left: 120px;
-    padding-right: -90px;
+    padding-right: 0px;
+    padding-top: 10px;
     margin-right: 20px;font-weight: 500px;
     transition: 0.5s;
 }
