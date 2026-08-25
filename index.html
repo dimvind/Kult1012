@@ -42,11 +42,17 @@
 
 <div class="type"> <h3 class="d20">Стать подтверждённым участником культа</h3>
     <h4 style="color: gray;">Введи свой Roblox никнейм(обязательно, тот что после "@")</h4>
-    <input type="text" id="nicknameInput"><button  onclick="sendToDeveloper()" 
-    <form action="https://api.web3forms.com/submit" method="POST">
-  <input type="hidden" name="access_key" value="7a232bea-86da-4ae5-8674-417c669ad0c1">
-        <input type="text" name="name" required>
-  <button  class="human" type="submit">✨</button>
+ <form action="https://api.web3forms.com/submit" method="POST">
+    <!-- Ваш скрытый ключ доступа Web3Forms -->
+    <input type="hidden" name="access_key" value="7a232bea-86da-4ae5-8674-417c669ad0c1">
+    
+    <!-- Поле для ввода никнейма/имени -->
+    <input type="text" name="nickname" placeholder="Введите ваш никнейм" required>
+    
+    <!-- Кнопка отправки -->
+    <button class="human" type="submit">✨ Отправить</button>
+</form>
+
     
 
     
