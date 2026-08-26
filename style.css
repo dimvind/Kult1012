@@ -219,6 +219,10 @@ width: 600px;
     justify-content: center;
     align-items: center;
 }
+h1{
+ margin-left:80px;
+
+}
 
 /* Новый контейнер, который держит всё вместе */
 .center-block {
