@@ -203,9 +203,10 @@ width: 600px;
 
 
 .parralax { 
-    /* Добавляем полупрозрачный белый слой (0.5 — это 50% прозрачности) поверх картинки */
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('soda.JPG');
+    /* Добавляем полупрозрачный черный слой (0.5 — это 50% прозрачности) поверх картинки */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('soda.JPG');
     
+    /* Все остальные свойства остаются такими же, как выше */
     width: 100%;
     height: 100vh;
     min-height: 100vh;
@@ -219,6 +220,7 @@ width: 600px;
     justify-content: center;
     align-items: center;
 }
+
 
 
 
