@@ -202,37 +202,59 @@ width: 600px;
 }
 
 
+./* 1. Добавляем настройки перспективы для всего сайта/страницы */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    perspective: 1px; /* Включает 3D-пространство для параллакса */
+    scroll-behavior: smooth;
+}
+
+/* 2. Настраиваем саму секцию */
 .parralax { 
-    /* Добавляем полупрозрачный черный слой (0.5 — это 50% прозрачности) поверх картинки */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('soda.JPG');
-    
-    /* Все остальные свойства остаются такими же, как выше */
+    position: relative;
     width: 100%;
     height: 100vh;
     min-height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    clip-path: inset(0);
+    
+    /* Включаем режим сохранения 3D-слоев */
+    transform-style: preserve-3d; 
     overflow: hidden; 
+
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* 3. Создаем фон через псевдоэлемент ::before */
+.parralax::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    /* Ваша прозрачная картинка */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('soda.JPG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* МАГИЯ ПАРАЛЛАКСА: отодвигаем фон назад в 3D и увеличиваем, чтобы не было пустых полей */
+    transform: translateZ(-1px) scale(2); 
+    z-index: -1; 
+}
 
-
-
-
-/* Новый контейнер, который держит всё вместе */
+/* 4. Контент (Макар, текст, кнопка) остается на переднем плане */
 .center-block {
+    transform: translateZ(0); /* Фиксирует контент на переднем плане */
     display: flex;
-    flex-direction: column; /* Выстраивает Макара, текст и кнопку строго друг под другом */
-    align-items: center;    /* Выравнивает их по центру относительно друг друга */
-    gap: 20px;              /* Делает аккуратный отступ между Макаром, текстом и кнопкой */
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
     text-align: center;
 }
 
-/* Ваши старые стили для .makar, .text-switcher и .join остаются без изменений, 
-   главное — чтобы у них в коде НЕ БЫЛО свойств "position: absolute" или "float" */
