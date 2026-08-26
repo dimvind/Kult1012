@@ -203,18 +203,21 @@ width: 600px;
 
 
 /* Используйте ровно то написание класса, которое у вас работает */
+./* Используйте то написание класса, которое у вас в HTML */
 .parralax { 
     background-image: url('soda.JPG');
     width: 100%;
     height: 100vh;
     min-height: 100vh;
-    opacity: 0.5;
-    align-content:center;
-    
-    /* Эти свойства растянут фон на весь экран без искажений и вернут элементы на место */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    /* ЭТИ ТРИ СТРОКИ ДЛЯ ВЫРАВНИВАНИЯ ВСЕГО В ЦЕНТР */
+    display: flex;
+    justify-content: center; /* Центрирует элементы по горизонтали */
+    align-items: center;     /* Центрирует элементы по вертикали */
+    flex-direction: column;  /* Выстраивает элементы ровно друг под другом */
 }
 
 
