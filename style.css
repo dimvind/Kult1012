@@ -202,15 +202,45 @@ width: 600px;
 }
 
 
+/* Контейнер-обертка */
 .parallax {
-    background-image: url('soda.JPG');
+    position: relative; /* Важно для позиционирования элементов внутри */
     width: 100%;
-    height: 100vh; /* Установлено фиксированное значение для корректной работы */
-    min-height: 100vh;
-    background-attachment: fixed; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-size: cover; 
+    height: 100vh;
+    overflow: hidden; /* Прячет лишнее, если картинки больше экрана */
+    display: flex;
+    justify-content: center; /* Центрирует контент по горизонтали */
+    align-items: center; /* Центрирует контент по вертикали */
+}
+
+/* Фоновая картинка (soda) */
+.bg-soda {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Растягивает без искажений */
+    z-index: 1; /* Самый нижний слой */
+}
+
+/* Персонаж Макар */
+.makar {
+    position: absolute;
+    bottom: 0; /* Прижимает Макара к низу экрана */
+    z-index: 2; /* Слой выше фона, но ниже текста */
+    max-height: 80vh; /* Чтобы Макар не занимал весь экран */
+}
+
+/* Блок с текстом и кнопкой */
+.content {
+    position: relative;
+    z-index: 3; /* Самый верхний слой — поверх всех картинок */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Расстояние между текстом и кнопкой */
 }
 
 
