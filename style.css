@@ -146,6 +146,7 @@ height: 210px;
     width: 420px;
     filter: drop-shadow(0 0 40px rgba(0, 255, 17, 0.653));
     transition: 0.5s;
+    border: 6px solid rgb(0, 67, 18);
 }
 .ga:hover{
     filter: drop-shadow(0 0 70px rgba(255, 0, 0, 0.993));
