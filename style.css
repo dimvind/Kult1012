@@ -202,45 +202,54 @@ width: 600px;
 }
 
 
-/* Контейнер-обертка */
+/* Контейнер на весь экран */
 .parallax {
-    position: relative; /* Важно для позиционирования элементов внутри */
+    position: relative; /* Создает систему координат для элементов внутри */
     width: 100%;
     height: 100vh;
-    overflow: hidden; /* Прячет лишнее, если картинки больше экрана */
-    display: flex;
-    justify-content: center; /* Центрирует контент по горизонтали */
-    align-items: center; /* Центрирует контент по вертикали */
+    overflow: hidden;
 }
 
-/* Фоновая картинка (soda) */
+/* Фоновая картинка из Roblox (soda.JPG) */
 .bg-soda {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Растягивает без искажений */
+    object-fit: cover; /* Растягивает скриншот на весь экран без искажений */
     z-index: 1; /* Самый нижний слой */
+    opacity: 0.5;
 }
 
-/* Персонаж Макар */
+/* Персонаж Макар (справа с красным свечением) */
 .makar {
     position: absolute;
-    bottom: 0; /* Прижимает Макара к низу экрана */
-    z-index: 2; /* Слой выше фона, но ниже текста */
-    max-height: 80vh; /* Чтобы Макар не занимал весь экран */
+    bottom: 5%; /* Небольшой отступ от нижнего края */
+    right: 5%; /* Сдвигаем в правый угол, как на макете */
+    height: 60vh; /* Масштабируем, чтобы он не был гигантским */
+    object-fit: contain;
+    z-index: 2; /* Картинка поверх фона */
 }
 
-/* Блок с текстом и кнопкой */
+/* Обертка для текста и кнопки */
 .content {
-    position: relative;
-    z-index: 3; /* Самый верхний слой — поверх всех картинок */
-    text-align: center;
+    position: absolute;
+    bottom: 10%; /* Размещаем внизу экрана */
+    left: 5%; /* Сдвигаем в левый угол */
+    z-index: 3; /* Поверх всех изображений */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 20px; /* Расстояние между текстом и кнопкой */
+    align-items: flex-start; /* Выравнивание текста по левому краю */
+    gap: 20px; /* Расстояние между текстом-переключателем и кнопкой */
+}
+
+/* Стилизация текста (как на вашем скриншоте) */
+.text-switcher {
+    font-family: sans-serif; /* Поменяйте на свой шрифт, если есть */
+    font-size: 48px;
+    font-weight: bold;
+    color: #ffffff;
 }
 
 
