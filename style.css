@@ -202,54 +202,26 @@ width: 600px;
 }
 
 
-/* Контейнер на весь экран */
-.parallax {
-    position: relative; /* Создает систему координат для элементов внутри */
+/* Обратите внимание на написание класса, как в вашем HTML: "parralax" с двумя "r" */
+.parralax {
+    /* 1. Возвращаем фоновую картинку */
+    background-image: url('soda.JPG'); 
     width: 100%;
     height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
+
+    /* 2. Включаем чистый CSS-параллакс */
+    background-attachment: fixed; /* Картинка застывает при скролле */
+    background-position: center;   /* Центрируем фон */
+    background-repeat: no-repeat;  /* Не дублируем картинку */
+    background-size: cover;        /* Растягиваем на весь экран */
+
+    /* 3. Ограничиваем влияние на внутренние элементы */
+    box-sizing: border-box;
 }
 
-/* Фоновая картинка из Roblox (soda.JPG) */
-.bg-soda {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Растягивает скриншот на весь экран без искажений */
-    z-index: 1; /* Самый нижний слой */
-    opacity: 0.5;
-}
+/* Стили для Макара и текста остаются ВАШИМИ старыми, 
+   никаких "position: absolute" им больше не задаем, чтобы они не плыли */
 
-/* Персонаж Макар (справа с красным свечением) */
-.makar {
-    position: absolute;
-    bottom: 5%; /* Небольшой отступ от нижнего края */
-    right: 5%; /* Сдвигаем в правый угол, как на макете */
-    height: 60vh; /* Масштабируем, чтобы он не был гигантским */
-    object-fit: contain;
-    z-index: 2; /* Картинка поверх фона */
-}
-
-/* Обертка для текста и кнопки */
-.content {
-    position: absolute;
-    bottom: 10%; /* Размещаем внизу экрана */
-    left: 5%; /* Сдвигаем в левый угол */
-    z-index: 3; /* Поверх всех изображений */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Выравнивание текста по левому краю */
-    gap: 20px; /* Расстояние между текстом-переключателем и кнопкой */
-}
-
-/* Стилизация текста (как на вашем скриншоте) */
-.text-switcher {
-    font-family: sans-serif; /* Поменяйте на свой шрифт, если есть */
-    font-size: 48px;
-    font-weight: bold;
-    color: #ffffff;
-}
 
 
