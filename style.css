@@ -211,7 +211,7 @@ width: 600px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    
+    opacity:0.5;
     /* 2. Удаляем fixed и включаем чистый параллакс через clip-path */
     background-attachment: scroll; /* Теперь картинка не будет сдвигаться и сжиматься */
     clip-path: inset(0); /* Создает невидимые границы, убирая любые полосы */
