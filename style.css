@@ -208,6 +208,8 @@ width: 600px;
     width: 100%;
     height: 100vh;
     min-height: 100vh;
+    opacity: 0.5;
+    align-content:center;
     
     /* Эти свойства растянут фон на весь экран без искажений и вернут элементы на место */
     background-size: cover;
