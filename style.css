@@ -202,3 +202,15 @@ width: 600px;
 }
 
 
+.parallax {
+    background-image: url('soda.JPG');
+    width: 100%;
+    height: 100vh; /* Установлено фиксированное значение для корректной работы */
+    min-height: 100vh;
+    background-attachment: fixed; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+}
+
+
