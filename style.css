@@ -202,26 +202,32 @@ width: 600px;
 }
 
 
-/* Ровно ваше оригинальное название класса */
+/* Главная секция с фоном и параллаксом */
 .parralax { 
     background-image: url('soda.JPG');
     width: 100%;
     height: 100vh;
     min-height: 100vh;
     
-    /* Свойства для правильного отображения картинки */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    
-    /* Чистый CSS-параллакс */
-    background-attachment: fixed;
+    background-attachment: fixed; /* Тот самый чистый CSS-параллакс */
 
-    /* Возвращаем центрирование элементов по флекс-сетке */
+    /* Центрируем НАШ ОБЩИЙ БЛОК ровно посередине экрана */
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+/* Новый контейнер, который держит всё вместе */
+.center-block {
+    display: flex;
+    flex-direction: column; /* Выстраивает Макара, текст и кнопку строго друг под другом */
+    align-items: center;    /* Выравнивает их по центру относительно друг друга */
+    gap: 20px;              /* Делает аккуратный отступ между Макаром, текстом и кнопкой */
+    text-align: center;
+}
 
+/* Ваши старые стили для .makar, .text-switcher и .join остаются без изменений, 
+   главное — чтобы у них в коде НЕ БЫЛО свойств "position: absolute" или "float" */
