@@ -202,22 +202,26 @@ width: 600px;
 }
 
 
-/* Используйте ровно то написание класса, которое у вас работает */
-./* Используйте то написание класса, которое у вас в HTML */
+/* Ровно ваше оригинальное название класса */
 .parralax { 
     background-image: url('soda.JPG');
     width: 100%;
     height: 100vh;
     min-height: 100vh;
+    
+    /* Свойства для правильного отображения картинки */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    
+    /* Чистый CSS-параллакс */
+    background-attachment: fixed;
 
-    /* ЭТИ ТРИ СТРОКИ ДЛЯ ВЫРАВНИВАНИЯ ВСЕГО В ЦЕНТР */
+    /* Возвращаем центрирование элементов по флекс-сетке */
     display: flex;
-    justify-content: center; /* Центрирует элементы по горизонтали */
-    align-items: center;     /* Центрирует элементы по вертикали */
-    flex-direction: column;  /* Выстраивает элементы ровно друг под другом */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
