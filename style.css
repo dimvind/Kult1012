@@ -203,27 +203,23 @@ width: 600px;
 
 
 .parralax { 
-    /* 1. Возвращаем стандартное поведение картинки */
-    background-image: url('soda.JPG');
+    /* Добавляем полупрозрачный белый слой (0.5 — это 50% прозрачности) поверх картинки */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('soda.JPG');
+    
     width: 100%;
-    height: 130vh;
+    height: 100vh;
     min-height: 100vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity:0.5;
-    /* 2. Удаляем fixed и включаем чистый параллакс через clip-path */
-    background-attachment: scroll; /* Теперь картинка не будет сдвигаться и сжиматься */
-    clip-path: inset(0); /* Создает невидимые границы, убирая любые полосы */
-
-    /* 3. Жестко блокируем появление скролла внутри этого блока */
+    background-attachment: scroll;
+    clip-path: inset(0);
     overflow: hidden; 
-
-    /* Центрирование контента */
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 
 
 
