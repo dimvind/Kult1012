@@ -247,7 +247,7 @@ html, body {
     
     /* Ваша прозрачная картинка */
    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('soda.JPG');
-
+box-shadow: inset 0 -40px 40px rgb(0, 0, 0);">
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
