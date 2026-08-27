@@ -8,6 +8,33 @@
 </head>
 <body>
 <div class="light">
+<header style="background-color: rgba(0, 0, 0, 0.608); width: 100%; position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(60px); /* для Safari */
+  border: 6px solid rgba(255, 255, 255, 0.83);
+  border-radius: 50px;
+ 
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);" align ="center">
+    <ul style="list-style: none; margin: 0; padding: 20px;">
+        <li><a style="font-size: 50px; padding: 20px; color: rgb(212, 212, 212); text-decoration: none;" href="#Kulte">О культе</a></li>
+        <li><a  style="font-size: 50px; padding: 20px; color: rgb(212, 212, 212); text-decoration: none;" href="#join">Как попасть в культ</a></li>
+        <li><a style="font-size: 50px; padding: 20px; color: rgb(212, 212, 212); text-decoration: none;" href="#Gallery">Галерея</a></li>
+    </ul>
+</header>
+<style>
+     a:hover{
+        color: rgb(255, 255, 255) !important;
+        transition: 0.3s;
+     
+    } 
+    li{
+        display: inline;
+    }
+</style>
 
 </div>
     <!-- Главный контейнер, который красиво отцентрирует всё по центру экрана -->
@@ -30,9 +57,11 @@
 
 
         
-        <h2>Что это такое ваш культ 1012?</h2>
+        <h2>О Культе 1012</h2>
     <img  class="foto" src="IGOWAGA.JPG">
-    <div class="text"><h3>1012 - это культ из дружелюбных игроков. Он достаточно малоизвестный, но они меня заставили писать здесь какой-то текст для воды, который никто никогда не прочитает, просто чтобы занять пустое место</h3></div>
+    <div class="text"><h3 id="Kulte">1012 - это культ, создзанный в конце августа DmVinv, Dferv_Dev и 1012 оригинальный скин брался от пользователя 1012. Первое упоминание 
+    данного культа в интернете - видео аккаунта Мих мур. Через несколько дней после него был создан официальный сайт культа. Наша цель - создать комфортный культ для общения и без токсичных игроков
+    .</h3></div>
 
     <h2 id="join">Видео-инструкция</h2>
     <h3 style="color: gray; padding-top: -10px;">Посмотрите короткое видео, чтобы узнать, как попасть в культ 1012</h3>
@@ -78,7 +107,7 @@
 <h4>Мы проверим, подходишь ли ты по требованием культа(об этом видео выше), и если всё пройдёт успешно, вы попадёте в список культа ниже</h4></div>
 <h2>
     Список культа:
-</h2>
+</h2 id="Spisok">
 <div style="  border-radius: 50px;
     background-color: rgba(159, 159, 159, 0.21);
     padding-left: 15px;
@@ -163,7 +192,7 @@
 
 
 
-<h2>Галерея 1012:</h2>
+<h2 id="Gallery">Галерея 1012:</h2>
 <div class="display1">
     <img  class="ga" style="border-radius: 50px; transform: rotate(-5deg); width: 400px;" src="1012.png">
 <img  class="ga" style="border-radius: 50px; transform: rotate(5deg); width: 400px;" src="ваор.JPG">
