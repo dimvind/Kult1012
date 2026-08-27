@@ -14,7 +14,12 @@
   width: 100%;
   z-index: 100;
   backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(60px); /* для Safari */
+  -webkit-backdrop-filter: blur(60px); 
+    position: fixed; /* Фиксирует элемент относительно экрана */
+  top: 0;          /* Прижимает к самому верху */
+  left: 0;         /* Прижимает к левому краю */
+  width: 100%;     /* Растягивает на всю ширину */
+  z-index: 1000;
   border: 6px solid rgba(255, 255, 255, 0.83);
   border-radius: 50px;
  
