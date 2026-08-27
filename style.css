@@ -218,7 +218,7 @@ html, body {
     overflow-x: hidden;
     perspective: 1px; /* Включает 3D-пространство для параллакса */
     scroll-behavior: smooth;
-    background-color: #000; /* Взято из вашего нижнего блока */
+    background-color: #000;
 }
 
 /* 2. Настраиваем саму секцию */
@@ -235,10 +235,23 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
 
-    /* ВАШЕ ИЗМЕНЕНИЕ: Переносим внутреннюю тень сюда. 
-       Здесь она не искажается 3D-трансформацией и будет видна поверх картинки */
-    box-shadow: inset 0 -40px 40px rgb(0, 0, 0);
+/* ФИКС ТЕНИ: создаем отдельный слой строго внизу секции поверх 3D пространства */
+.parralax::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px; /* Высота вашей тени */
+    
+    /* Сама тень (не inset, а обычная, направленная вверх через -40px) */
+    box-shadow: 0 -40px 40px rgb(0, 0, 0); 
+    
+    /* Сдвигаем слой на самый передний план в 3D, чтобы картинка его не перекрывала */
+    transform: translateZ(0.5px); 
+    pointer-events: none; /* Чтобы тень не мешала кликам */
 }
 
 /* 3. Создаем фон через псевдоэлемент ::before */
@@ -263,7 +276,7 @@ html, body {
 
 /* 4. Контент (Макар, текст, кнопка) остается на переднем плане */
 .center-block {
-    transform: translateZ(0); /* Фиксирует контент на переднем плане */
+    transform: translateZ(1px); /* Ставим выше тени (у тени 0.5px) */
     display: flex;
     flex-direction: column;
     align-items: center;
