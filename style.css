@@ -210,17 +210,18 @@ width: 600px;
 }
 
 
-./* 1. Добавляем настройки перспективы для всего сайта/страницы */
+/* 1. Настройки перспективы для страницы */
 html, body {
     margin: 0;
     padding: 0;
     height: 100%;
     overflow-x: hidden;
-    perspective: 1px; /* Включает 3D-пространство для параллакса */
+    perspective: 1px; /* Включает 3D-пространство */
     scroll-behavior: smooth;
+    background-color: #000;
 }
 
-/* 2. Настраиваем саму секцию */
+/* 2. Настраиваем саму секцию (Убран дубль, объединены стили) */
 .parralax { 
     position: relative;
     width: 100%;
@@ -231,12 +232,13 @@ html, body {
     transform-style: preserve-3d; 
     overflow: hidden; 
 
+    /* Центрирование контента */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* 3. Создаем фон через псевдоэлемент ::before */
+/* 3. Фон через псевдоэлемент ::before */
 .parralax::before {
     content: "";
     position: absolute;
@@ -245,21 +247,37 @@ html, body {
     right: 0;
     bottom: 0;
     
-    /* Ваша прозрачная картинка */
-   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('soda.JPG');
-box-shadow: inset 0 -40px 40px rgb(0, 0, 0);
+    /* ЗАМЕНА BOX-SHADOW: Первый градиент делает общее затемнение 50%, 
+       Второй градиент делает черную внутреннюю тень СНИЗУ (0 -40px) */
+    background-image: 
+        linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 40px), 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+        url('soda.JPG');
+    
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     
-    /* МАГИЯ ПАРАЛЛАКСА: отодвигаем фон назад в 3D и увеличиваем, чтобы не было пустых полей */
+    /* Магия 3D-параллакса */
     transform: translateZ(-1px) scale(2); 
     z-index: -1; 
 }
 
-/* 4. Контент (Макар, текст, кнопка) остается на переднем плане */
+/* Если вам нужно радиальное затемнение от краев к центру (как в вашем дубликате) */
+.parralax::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: radial-gradient(circle, rgba(0,0,0,0) 40%, rgba(0,0,0,1) 100%);
+    pointer-events: none;
+    z-index: 0; /* Перед фоном, но за текстом */
+}
+
+/* 4. Контент остается на переднем плане */
 .center-block {
-    transform: translateZ(0); /* Фиксирует контент на переднем плане */
+    position: relative;
+    z-index: 1;
+    transform: translateZ(0); 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -267,18 +285,4 @@ box-shadow: inset 0 -40px 40px rgb(0, 0, 0);
     text-align: center;
 }
 
-
-.parralax {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #000;
-
-background-image: radial-gradient(circle, rgba(0,0,0,0) 40%, rgba(0,0,0,1) 100%);
- 
-  
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed; /* Эффект параллакса */
-}
 
