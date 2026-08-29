@@ -209,19 +209,23 @@ width: 700px;
    width: 500px;
 }
 h1{
-  font-size: 35px;
+  font-size: 55px;
 }
 h3{
-    font-size:25px;
+    font-size:48px;
         
     }
 .hide-on-mobile{
     display:none;
 }
-
-
+.marar{
+    height:500px;
+}
+h2{
+    font-size:53px;
+}
     .why{
-        padding-top: 10px;
+        padding-top: 15px;
     }
 }
 
