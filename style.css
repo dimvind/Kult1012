@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(1, 1, 10);
+    background-color: rgb(1, 0, 10);
     color: aliceblue;
     margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -99,7 +99,7 @@ html, body {
     filter: drop-shadow(0 0 30px rgb(255, 0, 0));
     height: 90px;
     width: 450px;
-    font-size: 35px;
+    font-size: 80px;
 }
 h2{
     font-size: 60px;
