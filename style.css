@@ -336,3 +336,18 @@ html, body {
     }
 }
 
+
+    .parralax {
+    background: #ff00ff !important;
+    background-image: none !important;
+
+    outline: 10px solid lime !important;
+
+    position: relative !important;
+    z-index: 999 !important;
+}
+
+.parralax::before,
+.parralax::after {
+    display: none !important;
+}
