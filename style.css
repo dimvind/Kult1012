@@ -241,78 +241,97 @@ h2{
 }
 
 
-/* 1. Настройки перспективы для всего сайта/страницы */
+
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%;
+    min-height: 100%;
     overflow-x: hidden;
-    perspective: 1px; /* Включает 3D-пространство для параллакса */
     scroll-behavior: smooth;
     background-color: #000;
 }
 
-/* 2. Настраиваем саму секцию */
-.parralax { 
+body {
+    perspective: 1px;
+}
+
+/* Секция параллакса */
+.parralax {
     position: relative;
     width: 100%;
     height: 100vh;
     min-height: 100vh;
-    
-    /* Включаем режим сохранения 3D-слоев */
-    transform-style: preserve-3d; 
-    overflow: hidden; 
+
+    transform-style: preserve-3d;
+    overflow: hidden;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    isolation: isolate;
 }
 
-/* ФИКС ТЕНИ: создаем отдельный слой строго внизу секции поверх 3D пространства */
-.parralax::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 40px; /* Высота вашей тени */
-    
-    /* Сама тень (не inset, а обычная, направленная вверх через -40px) */
-    box-shadow: 0 -60px 40px rgb(0, 0, 0); 
-    
-    /* Сдвигаем слой на самый передний план в 3D, чтобы картинка его не перекрывала */
-    transform: translateZ(0.5px); 
-    pointer-events: none; /* Чтобы тень не мешала кликам */
-}
 
-/* 3. Создаем фон через псевдоэлемент ::before */
+/* ФОН */
 .parralax::before {
     content: "";
     position: absolute;
+
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    
-    /* Ваша прозрачная картинка */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('soda.JPG');
+    width: 100%;
+    height: 100%;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ),
+        url("soda.JPG");
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    
-    /* МАГИЯ ПАРАЛЛАКСА: отодвигаем фон назад в 3D и увеличиваем */
-    transform: translateZ(-1px) scale(2); 
-    z-index: -1; 
+
+    transform: translateZ(-1px) scale(2);
+
+    z-index: 0;
 }
 
-/* 4. Контент (Макар, текст, кнопка) остается на переднем плане */
+
+/* ТЕНЬ СНИЗУ */
+.parralax::after {
+    content: "";
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 40px;
+
+    box-shadow: 0 -60px 40px rgb(0, 0, 0);
+
+    z-index: 2;
+    pointer-events: none;
+}
+
+
+/* МАКАР + ТЕКСТ + КНОПКА */
 .center-block {
-    transform: translateZ(1px); /* Ставим выше тени (у тени 0.5px) */
+    position: relative;
+
+    /* ВАЖНО: никакого translateZ(1px) */
+    transform: translateZ(0);
+
+    z-index: 1;
+
     display: flex;
     flex-direction: column;
     align-items: center;
+
     gap: 20px;
     text-align: center;
 }
-
 
