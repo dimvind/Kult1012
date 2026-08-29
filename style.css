@@ -186,117 +186,67 @@ height: 210px;
 @media (max-width: 1000px) { 
     .foto { 
         height: 700px; 
-    }
+    } 
+     
     h3 { 
-        width: 700px;
-        font-size: 48px; 
+        width: 700px; 
     }
+
     video { 
         width: 700px; 
     }
+
     .display { 
         display: block;  
     } 
+ 
     .display1 { 
         display: flex; 
-    }
+    } 
+ 
     .type { 
-        width: 800px;
-        height: 200px;
+        width: 600px; 
     }
+
+    .type input { 
+        width: 500px; 
+    }
+
+    h1 { 
+        font-size: 55px; 
+    }
+
+    h3 { 
+        font-size: 48px; 
+    }
+
+    .hide-on-mobile { 
+        display: none; 
+    }
+
+    .makar {       /* у тебя было .marar — исправил */
+        height: 500px; 
+    }
+
+    h2 { 
+        font-size: 53px; 
+    }
+
+    h4 { 
+        font-size: 15px; 
+    }
+
+    .type { 
+        width: 800px; 
+        height: 200px; 
+    }
+
     .type input { 
         height: 50px; 
         width: 850px; 
     }
+
     .why { 
         padding-top: 15px; 
     }
-    h1 { 
-        font-size: 55px; 
-    }
-    .hide-on-mobile { 
-        display: none; 
-    }
-    .makar { 
-        height: 500px; 
-    }
-    h2 { 
-        font-size: 53px; 
-    }
-    h4 { 
-        font-size: 15px; 
-    }
-}
-
-
-
-
-html, body { 
-    margin: 0; 
-    padding: 0; 
-    min-height: 100%; 
-    overflow-x: hidden; 
-    scroll-behavior: smooth; 
-    background-color: #000; 
-}
-
-.parralax { 
-    position: relative; 
-    width: 100%; 
-    height: 100vh; 
-    min-height: 650px; 
-
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    overflow: hidden; 
-
-    background-image: 
-        linear-gradient(
-            rgba(0, 0, 0, 0.5), 
-            rgba(0, 0, 0, 0.5)
-        ),
-        url("soda.JPG");
-
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-attachment: fixed; 
-}
-
-.parralax::after { 
-    content: ""; 
-    position: absolute; 
-    left: 0; 
-    bottom: 0; 
-    width: 100%; 
-    height: 100px; 
-
-    background: linear-gradient(
-        transparent,
-        #000
-    );
-
-    pointer-events: none; 
-    z-index: 2; 
-}
-
-.center-block { 
-    position: relative; 
-    z-index: 1; 
-
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    gap: 20px; 
-    text-align: center; 
-}
-
-@media (max-width: 768px) { 
-
-    .parralax { 
-        min-height: 100svh; 
-        background-attachment: scroll; 
-        background-position: center; 
-    } 
 }
