@@ -10,30 +10,28 @@
 </head>
 <body>
 
-<header style="background-color: rgba(0, 0, 0, 0.608);
-
-  left: 0;
-  width: 100%;
- 
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(60px); 
-position: sticky !important;
-    top: 0;
-
-    width: 100%;
-        
-  width: 100%;    
-  z-index: 1000;
-    position: -webkit-sticky; /* Поддержка старых версий Safari */
-  position: sticky;
-top: 0;
-z-index: 1000;      /* Включает режим липкого элемента */
-  top: 0;                  /* Точка, при достижении которой меню замрет (у самого верха) */
- 
-  border: 6px solid rgba(255, 255, 255, 0.83);
-  border-radius: 50px;
- 
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);" align ="center">
+<header
+    style="
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        box-sizing: border-box;
+        z-index: 1000;
+        background-color: rgba(0, 0, 0, 0.608);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 6px solid rgba(255, 255, 255, 0.83);
+        border-radius: 50px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    "
+>
+    <ul style="
+        list-style: none;
+        margin: 0;
+        padding: 20px;
+    ">
     <ul style="list-style: none; margin: 0; padding: 20px;">
         <li><a style="font-size: 30px; padding: 40px; color: rgb(212, 212, 212); text-decoration: none;" href="#Kulte">О культе</a></li>
         <li><a  style="font-size: 30px; padding: 40px; color: rgb(212, 212, 212); text-decoration: none;" href="#join">Вступление в культ</a></li>
