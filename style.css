@@ -218,6 +218,11 @@ h3{
 .hide-on-mobile{
     display:none;
 }
+
+
+    .why{
+        padding-top: 10px;
+    }
 }
 
 
