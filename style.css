@@ -18,8 +18,9 @@ html, body {
   overflow-x: hidden;
   width: 100%;
 }
-
-
+header{
+position: fixed;
+}
 
 .makar {
     filter: drop-shadow(0 0 60px rgb(255, 0, 0));
@@ -87,7 +88,7 @@ html, body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     filter: drop-shadow(0 0 60px rgba(255, 0, 0, 0.686));
     transition: 1s ;
-    margin-top: 50px;
+    margin-top: 35px;
 }
 .light{
     filter: drop-shadow(0 0 60px rgba(255, 0, 0, 0.686));
