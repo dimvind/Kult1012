@@ -299,3 +299,14 @@ height: 210px;
 .top-menu a:hover {
     color: white;
 }
+.parralax {
+    position: relative !important;
+    width: 100% !important;
+    height: 100vh !important;
+    min-height: 650px !important;
+
+    background-image: url("../soda.JPG") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
