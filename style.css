@@ -1,3 +1,40 @@
+.parralax {
+    position: relative !important;
+    width: 100% !important;
+    height: 100vh !important;
+    min-height: 650px !important;
+
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+    overflow: hidden !important;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
+        ),
+        url("soda.JPG") !important;
+
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+.center-block {
+    position: relative !important;
+    z-index: 3 !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+
+    text-align: center !important;
+}
+
+
+
 body {
     background-color: rgb(1, 0, 10);
     color: aliceblue;
