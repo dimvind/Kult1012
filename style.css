@@ -1,300 +1,54 @@
-.parralax {
-    position: relative !important;
-    width: 100% !important;
-    height: 100vh !important;
-    min-height: 650px !important;
+/* =========================
+   БАЗОВЫЕ НАСТРОЙКИ
+========================= */
 
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-
-    overflow: hidden !important;
-
-    background-image:
-        linear-gradient(
-            rgba(0, 0, 0, 0.45),
-            rgba(0, 0, 0, 0.45)
-        ),
-        url("soda.JPG") !important;
-
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
+* {
+    box-sizing: border-box;
 }
 
-.center-block {
-    position: relative !important;
-    z-index: 3 !important;
-
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-
-    text-align: center !important;
+html {
+    scroll-behavior: smooth;
 }
 
-
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
 
 body {
     background-color: rgb(1, 0, 10);
     color: aliceblue;
-    margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+
+/* =========================
+   ГЛАВНЫЙ КОНТЕЙНЕР
+========================= */
 
 .main-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+
     min-height: 100vh;
     gap: 20px;
 }
 
-html, body {
-  overflow-x: hidden;
-  width: 100%;
-}
 
-
-.makar {
-    filter: drop-shadow(0 0 60px rgb(255, 0, 0));
-    width: 220px;
-    height: 300px;
-    object-fit: contain;
-    animation: moveMakar 3s ease-in-out infinite;
-    padding-bottom: 60px;
-}
-
-@keyframes moveMakar {
-    0% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(30px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
-}
-
-.text-switcher {
-    position: relative;
-    display: inline-block;
-    font-size: 100px;
-    font-weight: bold;
-    height: 30px;
-    text-align: center;
-    padding-bottom: 200px;
-}
-
-.text-switcher span {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    white-space: nowrap;
-}
-
-.num-1 {
-    animation: toggleFirst 2s steps(1) infinite;
-}
-
-.num-2 {
-    animation: toggleSecond 2s steps(1) infinite;
-  
-}
-
-@keyframes toggleFirst {
-    0%, 49.9% { opacity: 1; }
-    50%, 100% { opacity: 0; }
-}
-
-@keyframes toggleSecond {
-    0%, 49.9% { opacity: 0; }
-    50%, 100% { opacity: 1; }
-}
-.join{
-    background-color: rgb(188, 0, 0);
-    color: aliceblue;
-    height: 80px;
-    width: 400px;
-    font-size: 30px;
-    border-radius: 50px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    filter: drop-shadow(0 0 60px rgba(255, 0, 0, 0.686));
-    transition: 1s ;
-    margin-top: 35px;
-}
-.light{
-    filter: drop-shadow(0 0 60px rgba(255, 0, 0, 0.686));
-}
-
-.join:hover{
-    background-color: red;
-    transition: 0.5s ;
-    filter: drop-shadow(0 0 30px rgb(255, 0, 0));
-    height: 90px;
-    width: 450px;
-    font-size: 35px;
-}
-h2{
-    font-size: 60px;
-    padding-top: 90px;
-}
-.foto{
-    border-radius: 50px;
-    height: 500px;
-    transform: rotate(5deg);
-    filter: drop-shadow(0 0 80px rgba(0, 128, 255, 0.752));
-    padding-top: 20px;
-    padding-bottom: 20px;
-    transition: 0.5s;
-}
-h3{
-    font-size: 30px;
-    width: 1300px;
-}
-.foto:hover{
-    transform: rotate(10deg);
-    transition: 1s;
-}
-.why
-{
-    height: 200px;
-    width: 400px;
-    background-color: rgb(16, 0, 0);
-    border-radius: 50px;
-    filter: drop-shadow(0 0 40px rgba(9, 255, 0, 0.524));
-    font-size: 3svb;
-    align-content: center;
-    padding-left: 120px;
-    padding-right: 0px;
-    padding-top: 10px;
-    margin-right: 20px;font-weight: 500px;
-    transition: 0.5s;
-}
-html {
-  scroll-behavior: smooth;
-}
-
-.why:hover{
-height: 210px;
-    width: 420px;
-    filter: drop-shadow(0 0 40px rgba(0, 255, 17, 0.653));
-    transition: 0.5s;
-    border: 6px solid rgb(0, 67, 18);
-}
-.ga:hover{
-    filter: drop-shadow(0 0 70px rgba(255, 0, 0, 0.993));
-    transition: 0.5s;
-    cursor: pointer;
-}
-
-.ga{
-    transition: 0.5s;
-}
-.type{
-    border-radius: 50px;
-    background-color: rgba(159, 159, 159, 0.21);
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-top: 40px;
-}
-.type input{
-    width: 1000px;
-    border-radius: 50px;
-    height: 50px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 30px;
-    background-color: rgb(240, 248, 255);
-}
-
-.human{
-    border-radius: 50px;
-    height: 50px;
-    width: 50px;
-    background-color: blanchedalmond;
-    font-size: 20px;
-}
-.display{
-    display: flex;
-}
-@media (max-width: 1000px) { 
-    .foto { 
-        height: 700px; 
-    } 
-     
-    h3 { 
-        width: 700px; 
-    }
-
-    video { 
-        width: 700px; 
-    }
-
-    .display { 
-        display: block;  
-    } 
- 
-    .display1 { 
-        display: flex; 
-    } 
- 
-    .type { 
-        width: 600px; 
-    }
-
-    .type input { 
-        width: 500px; 
-    }
-
-    h1 { 
-        font-size: 55px; 
-    }
-
-    h3 { 
-        font-size: 48px; 
-    }
-
-    .hide-on-mobile { 
-        display: none; 
-    }
-
-    .makar {       /* у тебя было .marar — исправил */
-        height: 500px; 
-    }
-
-    h2 { 
-        font-size: 53px; 
-    }
-
-    h4 { 
-        font-size: 15px; 
-    }
-
-    .type { 
-        width: 800px; 
-        height: 200px; 
-    }
-
-    .type input { 
-        height: 50px; 
-        width: 850px; 
-    }
-
-    .why { 
-        padding-top: 15px; 
-    }
-}
-
+/* =========================
+   ВЕРХНЕЕ МЕНЮ
+========================= */
 
 .top-menu {
     position: sticky;
     top: 0;
-    z-index: 10000;
 
     width: 100%;
-    box-sizing: border-box;
+    z-index: 10000;
 
     background-color: rgba(0, 0, 0, 0.65);
 
@@ -309,12 +63,14 @@ height: 210px;
 
 .top-menu ul {
     list-style: none;
+
     margin: 0;
     padding: 18px 20px;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
     gap: 50px;
 }
 
@@ -336,14 +92,473 @@ height: 210px;
 .top-menu a:hover {
     color: white;
 }
-.parralax {
-    position: relative !important;
-    width: 100% !important;
-    height: 100vh !important;
-    min-height: 650px !important;
 
-    background-image: url("../soda.JPG") !important;
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
+
+/* =========================
+   ПАРАЛЛАКС
+========================= */
+
+.parralax {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+    min-height: 650px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
+        ),
+        url("soda.JPG");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* эффект параллакса */
+    background-attachment: fixed;
+}
+
+
+/* Плавное затемнение снизу */
+
+.parralax::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100px;
+
+    background: linear-gradient(
+        transparent,
+        rgb(1, 0, 10)
+    );
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+
+/* Контент внутри параллакса */
+
+.center-block {
+    position: relative;
+    z-index: 3;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 20px;
+
+    text-align: center;
+}
+
+
+/* =========================
+   ПЕРСОНАЖ
+========================= */
+
+.makar {
+    width: 220px;
+    height: 300px;
+
+    object-fit: contain;
+
+    padding-bottom: 60px;
+
+    filter: drop-shadow(
+        0 0 60px rgb(255, 0, 0)
+    );
+
+    animation: moveMakar 3s ease-in-out infinite;
+}
+
+@keyframes moveMakar {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(30px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================
+   ТЕКСТ "КУЛЬТ 1012"
+========================= */
+
+.text-switcher {
+    position: relative;
+
+    display: inline-block;
+
+    font-size: 100px;
+    font-weight: bold;
+
+    height: 30px;
+
+    text-align: center;
+
+    padding-bottom: 200px;
+}
+
+.text-switcher span {
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    white-space: nowrap;
+}
+
+.num-1 {
+    animation: toggleFirst 2s steps(1) infinite;
+}
+
+.num-2 {
+    animation: toggleSecond 2s steps(1) infinite;
+}
+
+@keyframes toggleFirst {
+
+    0%,
+    49.9% {
+        opacity: 1;
+    }
+
+    50%,
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes toggleSecond {
+
+    0%,
+    49.9% {
+        opacity: 0;
+    }
+
+    50%,
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* =========================
+   КНОПКА
+========================= */
+
+.join {
+    width: 400px;
+    height: 80px;
+
+    margin-top: 35px;
+
+    background-color: rgb(188, 0, 0);
+    color: aliceblue;
+
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    border-radius: 50px;
+
+    filter: drop-shadow(
+        0 0 60px rgba(255, 0, 0, 0.686)
+    );
+
+    transition: 0.5s;
+}
+
+.join:hover {
+    width: 450px;
+    height: 90px;
+
+    background-color: red;
+
+    font-size: 35px;
+
+    filter: drop-shadow(
+        0 0 30px rgb(255, 0, 0)
+    );
+}
+
+.light {
+    filter: drop-shadow(
+        0 0 60px rgba(255, 0, 0, 0.686)
+    );
+}
+
+
+/* =========================
+   ЗАГОЛОВКИ
+========================= */
+
+h2 {
+    font-size: 60px;
+    padding-top: 90px;
+}
+
+h3 {
+    font-size: 30px;
+    width: 1300px;
+}
+
+
+/* =========================
+   ФОТО
+========================= */
+
+.foto {
+    height: 500px;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    border-radius: 50px;
+
+    transform: rotate(5deg);
+
+    filter: drop-shadow(
+        0 0 80px rgba(0, 128, 255, 0.752)
+    );
+
+    transition: 0.5s;
+}
+
+.foto:hover {
+    transform: rotate(10deg);
+
+    transition: 1s;
+}
+
+
+/* =========================
+   БЛОКИ "ПОЧЕМУ МЫ"
+========================= */
+
+.why {
+    width: 400px;
+    height: 200px;
+
+    padding-left: 120px;
+    padding-right: 0;
+    padding-top: 10px;
+
+    margin-right: 20px;
+
+    background-color: rgb(16, 0, 0);
+
+    border-radius: 50px;
+
+    font-size: 3svb;
+    font-weight: 500;
+
+    align-content: center;
+
+    filter: drop-shadow(
+        0 0 40px rgba(9, 255, 0, 0.524)
+    );
+
+    transition: 0.5s;
+}
+
+.why:hover {
+    width: 420px;
+    height: 210px;
+
+    border: 6px solid rgb(0, 67, 18);
+
+    filter: drop-shadow(
+        0 0 40px rgba(0, 255, 17, 0.653)
+    );
+
+    transition: 0.5s;
+}
+
+
+/* =========================
+   ГАЛЕРЕЯ
+========================= */
+
+.ga {
+    transition: 0.5s;
+}
+
+.ga:hover {
+    cursor: pointer;
+
+    filter: drop-shadow(
+        0 0 70px rgba(255, 0, 0, 0.993)
+    );
+
+    transition: 0.5s;
+}
+
+
+/* =========================
+   ФОРМА
+========================= */
+
+.type {
+    margin-top: 40px;
+
+    padding-left: 15px;
+    padding-right: 15px;
+
+    border-radius: 50px;
+
+    background-color: rgba(159, 159, 159, 0.21);
+}
+
+.type input {
+    width: 1000px;
+    height: 50px;
+
+    border-radius: 50px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+
+    background-color: rgb(240, 248, 255);
+}
+
+.human {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50px;
+
+    background-color: blanchedalmond;
+
+    font-size: 20px;
+}
+
+
+/* =========================
+   FLEX-БЛОКИ
+========================= */
+
+.display {
+    display: flex;
+}
+
+
+/* =========================
+   АДАПТАЦИЯ
+========================= */
+
+@media (max-width: 1000px) {
+
+    .foto {
+        height: 700px;
+    }
+
+    h1 {
+        font-size: 55px;
+    }
+
+    h2 {
+        font-size: 53px;
+    }
+
+    h3 {
+        width: 700px;
+        font-size: 48px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    video {
+        width: 700px;
+        max-width: 100%;
+    }
+
+    .display {
+        display: block;
+    }
+
+    .display1 {
+        display: flex;
+    }
+
+    .hide-on-mobile {
+        display: none;
+    }
+
+    .makar {
+        height: 500px;
+    }
+
+    .type {
+        width: 800px;
+        height: 200px;
+
+        max-width: 95%;
+    }
+
+    .type input {
+        width: 100%;
+        height: 50px;
+    }
+
+    .why {
+        padding-top: 15px;
+    }
+}
+
+
+/* На телефонах background-attachment: fixed
+   часто работает плохо */
+
+@media (max-width: 768px) {
+
+    .parralax {
+        min-height: 100svh;
+
+        background-attachment: scroll;
+    }
+
+    .top-menu ul {
+        gap: 20px;
+    }
+
+    .top-menu a {
+        font-size: 18px;
+    }
+
+    .text-switcher {
+        font-size: 60px;
+    }
+
+    .join {
+        width: 300px;
+        max-width: 90vw;
+    }
+
+    .join:hover {
+        width: 320px;
+    }
 }
